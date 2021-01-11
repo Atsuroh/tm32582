@@ -1,0 +1,71 @@
+<%= render "shared/header" %>
+<div class='main'>
+
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      Welcome to TECH MART
+    </h2>
+    <p class='service-explain'>
+      Incredible Costs, Qualities, and Hospitalities!!
+    </p>
+    <div class='store-btn'>
+      <%= link_to image_tag("https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2011-09-21&kind=iossoftware&bubble=ios_apps", class:"apple-btn"), "#" %>
+      <%= link_to image_tag("dl-android.png", class:"google-btn"), "#" %>
+    </div>
+  </div>
+
+  <div class="inner">
+    <h1 class="page-heading">Information</h1>
+    <div class="card__wrapper">
+      <div class="card">
+        <div class="card__body">
+          <h2 class="card__title">Webチラシ</h2>
+          <%= link_to image_tag("chirashi.jpg", class:"card__summary"), "#" %>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__body">
+          <h2 class="card__title">お得なキャンペーン</h2>
+          <%= link_to image_tag("onigiri.jpg", class:"card__summary"), "#" %>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__body">
+          <h2 class="card__title">季節物</h2>
+          <%= link_to image_tag("kisetsumono.jpg", class:"card__summary"), "#" %>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__body">
+          <h2 class="card__title">ポイント還元</h2>
+          <%= link_to image_tag("point.kangen.jpg", class:"card__summary"), "#" %>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__body">
+          <h2 class="card__title">宅配サービス</h2>
+          <%= link_to image_tag("takuhai.jpg", class:"card__summary"), "#" %>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__body">
+          <h2 class="card__title">当社自慢の品</h2>
+          <%= link_to image_tag("bread.jpg", class:"card__summary"), "#" %>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__body">
+          <h2 class="card__title">TECH MARTの食育</h2>
+          <%= link_to image_tag("yasai.jpg", class:"card__summary"), "#" %>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__body">
+          <h2 class="card__title">お知らせ</h2>
+          <%= link_to image_tag("info1.jpg", class:"card__summary"), "#" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render "shared/footer" %>

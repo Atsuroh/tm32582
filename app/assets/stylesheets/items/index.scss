@@ -1,0 +1,94 @@
+a {
+  text-decoration: none;
+}
+
+.main {
+  background: #f8f8f8;
+}
+
+/* 画面上部の「人生を変えるフリマアプリ」帯部分 */
+.title-contents {
+  width: 100vw;
+  background-image: image-url('top.7146.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.service-title {
+  font-size: 8vh;
+}
+
+.service-explain {
+  font-size: 2.5vh;
+  line-height: 40px;
+}
+
+.store-btn {
+  display: flex;
+  margin-top: 24px;
+}
+
+.apple-btn {
+  margin-right: 1vw;
+  height: 9vh;
+}
+
+.google-btn {
+  height: 9vh;
+}
+
+.header {
+  background-color: #f1f8fe;
+  margin-bottom: 48px;
+  padding: 10px 0;
+}
+
+.inner {
+  width: 1024px;
+  margin: 0 auto;
+}
+.logo {
+  width: 100px;
+}
+.page-heading {
+  font-size: 35px;
+  margin-top: 35px;
+  background:linear-gradient(transparent 70%, #7106ec 0%);
+}
+.card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.card {
+  width: calc((100% - 50px) / 4);
+  margin-bottom: 40px;
+}
+.card__img {
+  margin-bottom: 16px;
+}
+.card__title {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.card__summary {
+  width: 15vw;
+}
+.footer {
+  background-color: #999;
+  padding: 10px 0;
+}
+.copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+}

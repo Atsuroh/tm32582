@@ -1,0 +1,12 @@
+.footer {
+  width: 100vw;
+  padding: 5vh 0;
+  color: #FFF;
+  background-color: #f30606;
+  text-align: center;
+}
+
+.tech_group {
+  width: 20vh;
+  vertical-align: bottom;
+}

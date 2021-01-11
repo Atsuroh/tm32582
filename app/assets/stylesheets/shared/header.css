@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  width: 100vw;
+  padding: 2vh 15vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-bar-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.techma-icon {
+  width: 15vw;
+  margin-right: 10vw;
+}
+
+.tw {
+  width: 3vw;
+}
+
+.fb {
+  width: 3vw;
+}
+
+.ig {
+  width: 3vw;
+}
+
+.ln {
+  width: 3vw;
+}
+
+.nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+}
+
+.lists-left {
+  display: flex;
+  min-width: 200px;
+}
+
+.store-list {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  background:linear-gradient(transparent 70%, #FFFF00 0%);
+}
+
+.recommend-list {
+  text-decoration: none;
+  color: #333333;
+  margin-right: 3vw;
+  background:linear-gradient(transparent 70%, #FFFF00 0%);
+}
+
+.online-list {
+  text-decoration: none;
+  color: #333333;
+  margin-right: 3vw;
+  background:linear-gradient(transparent 70%, #FFFF00 0%);
+}
+
+.company-list {
+  text-decoration: none;
+  color: #333333;
+  margin-right: 3vw;
+  background:linear-gradient(transparent 70%, #FFFF00 0%);
+}
+
+.job-list {
+  text-decoration: none;
+  color: #333333;
+  background:linear-gradient(transparent 70%, #FFFF00 0%);
+}
+
+.lists-right {
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+}
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+  background:linear-gradient(transparent 70%, #00ff88 0%);
+}
+
+.logout {
+  text-decoration: none;
+  color: #333333;
+  background:linear-gradient(transparent 70%, #00ff88 0%);
+}
+
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #333333;
+  background:linear-gradient(transparent 70%, #00ff88 0%);
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #333333;
+  background:linear-gradient(transparent 70%, #00ff88 0%);
+}
