@@ -1,0 +1,2 @@
+class Tmart < ApplicationRecord
+end
