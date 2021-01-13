@@ -1,71 +1,108 @@
 <%= render "shared/header" %>
-<div class='main'>
+<%# 商品一覧 %>
+<div class='item-contents'>
+  <h2 class='title'>今週のセール</h2>
+  <%= link_to '新規投稿商品', "#", class: "subtitle" %>
+  <ul class='item-lists'>
 
-  <div class='title-contents'>
-    <h2 class='service-title'>
-      Welcome to TECH MART
-    </h2>
-    <p class='service-explain'>
-      Incredible Costs, Qualities, and Hospitalities!!
-    </p>
-    <div class='store-btn'>
-      <%= link_to image_tag("https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2011-09-21&kind=iossoftware&bubble=ios_apps", class:"apple-btn"), "#" %>
-      <%= link_to image_tag("dl-android.png", class:"google-btn"), "#" %>
-    </div>
-  </div>
+    <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+    <li class='list'>
+      <%= link_to "#" do %>
+      <div class='item-img-content'>
+        <%= image_tag "item-sample.png", class: "item-img" %>
+      </div>
+      <div class='item-info'>
+        <h3 class='item-name'>
+          <%= "商品名" %>
+        </h3>
+        <div class='item-price'>
+          <span><%= "販売価格" %>円<br><%= '配送料負担' %></span>
+          <div class='star-btn'>
+            <%= image_tag "star.png", class:"star-icon" %>
+            <span class='star-count'>0</span>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </li>
+    <%# //商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
 
-  <div class="inner">
-    <h1 class="page-heading">Information</h1>
-    <div class="card__wrapper">
-      <div class="card">
-        <div class="card__body">
-          <h2 class="card__title">Webチラシ</h2>
-          <%= link_to image_tag("chirashi.jpg", class:"card__summary"), "#" %>
+    <%# 商品がない場合は以下のダミー商品が表示されるようにしましょう %>
+    <%# 商品がある場合は表示されないようにしましょう %>
+    <li class='list'>
+      <%= link_to '#' do %>
+      <%= image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/10/a004.png", class: "item-img" %>
+      <div class='item-info'>
+        <h3 class='item-name'>
+          商品を出品してね！
+        </h3>
+        <div class='item-price'>
+          <span>99999999円<br>(税込み)</span>
+          <div class='star-btn'>
+            <%= image_tag "star.png", class:"star-icon" %>
+            <span class='star-count'>0</span>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card__body">
-          <h2 class="card__title">お得なキャンペーン</h2>
-          <%= link_to image_tag("onigiri.jpg", class:"card__summary"), "#" %>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card__body">
-          <h2 class="card__title">季節物</h2>
-          <%= link_to image_tag("kisetsumono.jpg", class:"card__summary"), "#" %>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card__body">
-          <h2 class="card__title">ポイント還元</h2>
-          <%= link_to image_tag("point.kangen.jpg", class:"card__summary"), "#" %>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card__body">
-          <h2 class="card__title">宅配サービス</h2>
-          <%= link_to image_tag("takuhai.jpg", class:"card__summary"), "#" %>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card__body">
-          <h2 class="card__title">当社自慢の品</h2>
-          <%= link_to image_tag("bread.jpg", class:"card__summary"), "#" %>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card__body">
-          <h2 class="card__title">TECH MARTの食育</h2>
-          <%= link_to image_tag("yasai.jpg", class:"card__summary"), "#" %>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card__body">
-          <h2 class="card__title">お知らせ</h2>
-          <%= link_to image_tag("info1.jpg", class:"card__summary"), "#" %>
-        </div>
-      </div>
-    </div>
-  </div>
+      <% end %>
+    </li>
+    <%# //商品がある場合は表示されないようにしましょう %>
+    <%# //商品がない場合は以下のダミー商品が表示されるようにしましょう %>
+  </ul>
 </div>
+<%# 商品一覧 %>
+<div class='item-contents'>
+  <h2 class='title'>本日の見切り品</h2>
+  <%= link_to '新規投稿商品', "#", class: "subtitle" %>
+  <ul class='item-lists'>
+
+    <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+    <li class='list'>
+      <%= link_to "#" do %>
+      <div class='item-img-content'>
+        <%= image_tag "item-sample.png", class: "item-img" %>
+      </div>
+      <div class='item-info'>
+        <h3 class='item-name'>
+          <%= "商品名" %>
+        </h3>
+        <div class='item-price'>
+          <span><%= "販売価格" %>円<br><%= '配送料負担' %></span>
+          <div class='star-btn'>
+            <%= image_tag "star.png", class:"star-icon" %>
+            <span class='star-count'>0</span>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </li>
+    <%# //商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+
+    <%# 商品がない場合は以下のダミー商品が表示されるようにしましょう %>
+    <%# 商品がある場合は表示されないようにしましょう %>
+    <li class='list'>
+      <%= link_to '#' do %>
+      <%= image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/10/a004.png", class: "item-img" %>
+      <div class='item-info'>
+        <h3 class='item-name'>
+          商品を出品してね！
+        </h3>
+        <div class='item-price'>
+          <span>99999999円<br>(税込み)</span>
+          <div class='star-btn'>
+            <%= image_tag "star.png", class:"star-icon" %>
+            <span class='star-count'>0</span>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </li>
+    <%# //商品がある場合は表示されないようにしましょう %>
+    <%# //商品がない場合は以下のダミー商品が表示されるようにしましょう %>
+  </ul>
+</div>
+<%= link_to(new_tmart_path, class: 'purchase-btn') do %>
+  <span class='purchase-btn-text'>出品する</span>
+  <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+<% end %>
 <%= render "shared/footer" %>
