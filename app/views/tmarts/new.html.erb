@@ -1,7 +1,7 @@
 </header>
 <div class="items-sell-main">
   <h2 class="items-sell-title">商品の情報を入力</h2>
-  <%= form_with(model: @item, local: true) do |f| %>
+  <%= form_with(model: @tmart, local: true) do |f| %>
 
   <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
   <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
@@ -47,7 +47,7 @@
       </div>
       <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
       <div class="weight-bold-text">
-        商品の状態
+        消費期限
         <span class="indispensable">必須</span>
       </div>
       <%= f.collection_select(:status_id, Status.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
@@ -63,20 +63,10 @@
     </div>
     <div class="form">
       <div class="weight-bold-text">
-        配送料の負担
+        店舗名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.collection_select(:burden_id, Burden.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
-      <div class="weight-bold-text">
-        発送元の地域
-        <span class="indispensable">必須</span>
-      </div>
-      <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
-      <div class="weight-bold-text">
-        発送までの日数
-        <span class="indispensable">必須</span>
-      </div>
-      <%= f.collection_select(:shipping_id, Shipping.all, :id, :name, {}, {class:"select-box", id:"item-scheduled-delivery"}) %>
+      <%= f.collection_select(:store_id, Store.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
     </div>
   </div>
   <%# /配送について %>
