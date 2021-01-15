@@ -35,12 +35,14 @@ ActiveRecord::Schema.define(version: 2021_01_13_034709) do
 
   create_table "tmarts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "product_name", null: false
-    t.text "text", null: false
+    t.integer "disposal_id", null: false
     t.integer "category_id", null: false
-    t.integer "status_id", null: false
+    t.date "deadline", null: false
+    t.integer "count", null: false
     t.integer "store_id", null: false
-    t.integer "before", null: false
-    t.integer "after", null: false
+    t.integer "before_price", null: false
+    t.integer "after_price", null: false
+    t.text "text"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

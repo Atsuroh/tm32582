@@ -2,7 +2,6 @@
 <%# 商品一覧 %>
 <div class='item-contents'>
   <h2 class='title'>本日の見切り品</h2>
-  <%= link_to '新規投稿商品', "#", class: "subtitle" %>
   <ul class='item-lists'>
     <% if @tmarts.length != 0 %>
       <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
@@ -17,7 +16,7 @@
               <%= tmart.product_name %>
             </h3>
             <div class='item-price'>
-              <span><%= tmart.after %>円<br></span>
+              <span><%= tmart.after_price %>円<br></span>
               <div class='star-btn'>
                 <%= image_tag "star.png", class:"star-icon" %>
                 <span class='star-count'>0</span>
