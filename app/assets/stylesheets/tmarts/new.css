@@ -151,6 +151,10 @@
   align-items: center;
 }
 
+.count-content {
+  margin-left: 350px;
+}
+
 .sell-yen {
   font-size: 18px;
 }

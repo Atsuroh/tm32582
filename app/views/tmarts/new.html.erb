@@ -70,7 +70,17 @@
                     date_separator: '%s'),
                   "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
     </div>
-    <p class='info-text'>※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。</p>
+    <div class='input-hour-min'>
+      <span class="indispensable">必須</span>
+      <div class='input-hour'>
+      時
+      </div>
+      <%= f.collection_select(:hour_id, Hour.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+      <div class='input-min'>
+      分
+      </div>
+      <%= f.collection_select(:minute_id, Minute.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+    </div>
   </div>
   <%# 配送について %>
   <div class="items-detail">
@@ -85,7 +95,7 @@
     </div>
   </div>
   <%# /配送について %>
-  <div class="price-content">
+  <div class="count-content">
     <div class="price-text">
       <span>個数</span>
       <span class="indispensable">必須</span>
@@ -97,7 +107,6 @@
   <div class="sell-price">
     <div class="weight-bold-text question-text">
       <span>価格<br>(¥300〜9,999,999)</span>
-      <a class="question" href="#">?</a>
     </div>
     <div>
       <div class="price-content">

@@ -18,9 +18,9 @@ class TmartsController < ApplicationController
   end
   private
   def tmart_params
-    params.require(:tmart).permit(:image, :product_name,
+    params.require(:tmart).permit(:image, :product_name, :hour_id,
                                   :text, :count, :category_id,
-                                  :disposal_id, :store_id,
+                                  :disposal_id, :store_id, :minute_id,
                                   :deadline, :before_price,
                                   :after_price).merge(user_id: current_user.id)
   end
