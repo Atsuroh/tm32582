@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 2021_01_13_034709) do
     t.integer "disposal_id", null: false
     t.integer "category_id", null: false
     t.date "deadline", null: false
+    t.integer "hour_id", null: false
+    t.integer "minute_id", null: false
     t.integer "count", null: false
     t.integer "store_id", null: false
     t.integer "before_price", null: false
