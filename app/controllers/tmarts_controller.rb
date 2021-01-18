@@ -16,6 +16,8 @@ class TmartsController < ApplicationController
   end
   def show
   end
+  def destroy
+  end
   private
   def tmart_params
     params.require(:tmart).permit(:image, :product_name, :hour_id,
