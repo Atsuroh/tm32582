@@ -1,6 +1,4 @@
 <%= render "shared/header" %>
-
-<%# 商品の概要 %>
 <div class="item-show">
   <div class="item-box">
     <h2 class="name">
@@ -42,7 +40,7 @@
         </tr>
         <tr>
           <th class="detail-item">消費期限</th>
-          <td class="detail-value"><%= @tmart.deadline %>　　<%= @tmart.hour.name %>時<%= @tmart.hour.name %>分</td>
+          <td class="detail-value"><%= @tmart.deadline %>/<%= @tmart.hour.name %>時<%= @tmart.hour.name %>分</td>
         </tr>
         <tr>
           <th class="detail-item">取扱店舗</th>
@@ -52,24 +50,19 @@
           <th class="detail-item">値下げ理由</th>
           <td class="detail-value"><%= @tmart.disposal.name %></td>
         </tr>
+        <tr>
+          <th class="detail-item">個数</th>
+          <td class="detail-value"><%= @tmart.count %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">備考</th>
+          <td class="detail-value"><%= @tmart.text %></td>
+        </tr>
       </tbody>
       <div class="item-explain-box">
         <span><%= @tmart.text %></span>
       </div>
     </table>
   </div>
-  <%# /商品の概要 %>
-  <div class="links">
-    <a href="#" class="change-item-btn">
-      ＜ 前の商品
-    </a>
-    <a href="#" class="change-item-btn">
-      後ろの商品 ＞
-    </a>
-  </div>
-  <%# 詳細ページで表示されている商品のカテゴリー名を表示しましょう %>
-  <a href=“#” class=‘another-item’><%= @tmart.category.name %>をもっと見る</a>
-  <%# //詳細ページで表示されている商品のカテゴリー名を表示しましょう %>
 </div>
-
 <%= render "shared/footer" %>

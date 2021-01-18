@@ -43,22 +43,6 @@
   height: 33vh;
 }
 
-.sold-out {
-  position: absolute;
-  top: 40%;
-  width: 100%;
-  text-align: center;
-  background-color: crimson;
-  transform: skewY(-10deg);
-}
-
-.sold-out>span {
-  color: #FFF;
-  font-size: 45px;
-  font: bold;
-}
-
-
 .item-info {
   background-color: #FFF;
   color: black;
@@ -66,27 +50,15 @@
 }
 
 .item-name {
-  font-size: 2.5vh;
+  font-size: 3vh;
+  margin-left: 80px;
+  color: blueviolet;
 }
 
 .item-price {
-  font-size: 1.5vh;
+  font-size: 5vh;
   display: flex;
   justify-content: space-between;
-}
-
-
-.star-btn {
-  display: flex;
-  align-items: center;
-}
-
-.star-icon {
-  height: 2vh;
-  width: 2vh;
-  margin-right: 0.5vw;
-}
-
-.star-count {
-  font-size: 2vh;
+  margin-left: 60px;
+  color: crimson;
 }
