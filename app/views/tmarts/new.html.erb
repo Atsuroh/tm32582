@@ -1,6 +1,6 @@
 </header>
-<div class="items-sell-main">
-  <h2 class="items-sell-title">商品の情報を入力</h2>
+<div class="tmart-sell-main">
+  <h2 class="tmart-sell-title">商品の情報を入力</h2>
   <%= form_with(model: @tmart, local: true) do |f| %>
 
   <div class="img-upload">
@@ -16,34 +16,34 @@
     </div>
   </div>
 
-  <div class="new-items">
+  <div class="new-tmart">
     <div class="weight-bold-text">
       商品名
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :product_name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+    <%= f.text_area :product_name, class:"tmart-text", id:"tmart-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
   </div>
 
-  <div class="items-detail">
+  <div class="tmart-detail">
     <div class="weight-bold-text">商品の種類</div>
     <div class="form">
       <div class="weight-bold-text">
         カテゴリー
         <span class="indispensable">必須</span>
       </div>
-      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"tmart-category"}) %>
       <div class="weight-bold-text">
         値下げ理由
         <span class="indispensable">必須</span>
       </div>
-      <%= f.collection_select(:disposal_id, Disposal.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+      <%= f.collection_select(:disposal_id, Disposal.all, :id, :name, {}, {class:"select-box", id:"tmart-sales-status"}) %>
     </div>
   </div>
-  <div class="items-explain">
+  <div class="tmart-explain">
     <div class="weight-bold-text">
       備考欄
     </div>
-    <%= f.text_area :text, class:"items-text", id:"item-info" %>
+    <%= f.text_area :text, class:"tmart-text", id:"tmart-info" %>
   </div>
 
   <div class="form-group">
@@ -69,15 +69,15 @@
       <div class='input-hour'>
       時
       </div>
-      <%= f.collection_select(:hour_id, Hour.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+      <%= f.collection_select(:hour_id, Hour.all, :id, :name, {}, {class:"select-box", id:"tmart-shipping-fee-status"}) %>
       <div class='input-min'>
       分
       </div>
-      <%= f.collection_select(:minute_id, Minute.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+      <%= f.collection_select(:minute_id, Minute.all, :id, :name, {}, {class:"select-box", id:"tmart-shipping-fee-status"}) %>
     </div>
   </div>
 
-  <div class="items-detail">
+  <div class="tmart-detail">
     <div class="weight-bold-text question-text">
     </div>
     <div class="form">
@@ -85,7 +85,7 @@
         店舗名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.collection_select(:store_id, Store.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+      <%= f.collection_select(:store_id, Store.all, :id, :name, {}, {class:"select-box", id:"tmart-shipping-fee-status"}) %>
     </div>
   </div>
 
@@ -94,13 +94,13 @@
       <span>個数</span>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_field :count, class:"price-input", id:"item-price", placeholder:"例）300" %>
+    <%= f.text_field :count, class:"price-input", id:"tmart-price" %>
     <span class="sell-yen">個</span>
   </div>
 
   <div class="sell-price">
     <div class="weight-bold-text question-text">
-      <span>価格<br>(¥300〜9,999,999)</span>
+      <span>価格<br>(¥1〜9,999,999)</span>
     </div>
     <div>
       <div class="price-content">
@@ -109,7 +109,7 @@
           <span class="indispensable">必須</span>
         </div>
         <span class="sell-yen">¥</span>
-        <%= f.text_field :before_price, class:"price-input", id:"item-price", placeholder:"例）300" %>
+        <%= f.text_field :before_price, class:"price-input", id:"tmart-price" %>
       </div>
       <div class="price-content">
         <div class="price-text">
@@ -117,7 +117,7 @@
           <span class="indispensable">必須</span>
         </div>
         <span class="sell-yen">¥</span>
-        <%= f.text_field :after_price, class:"price-input", id:"item-price", placeholder:"例）300" %>
+        <%= f.text_field :after_price, class:"price-input", id:"tmart-price" %>
       </div>
     </div>
   </div>
