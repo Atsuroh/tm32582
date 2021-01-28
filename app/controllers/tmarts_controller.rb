@@ -1,5 +1,7 @@
 class TmartsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_tmart, only: [:show, :edit, :update, :destroy]
+  before_action :forbit_correct_user, only: [:edit, :update, :destroy]
   def index
     @tmarts = Tmart.order("created_at DESC")
   end
@@ -9,12 +11,16 @@ class TmartsController < ApplicationController
   def create
     @tmart = Tmart.new(tmart_params)
     if @tmart.save
-      redirect_to tmarts_path and return
+      redirect_to tmarts_path
     else
-      render :new and return
+      render :new
     end
   end
   def show
+  end
+  def edit
+  end
+  def update
   end
   def destroy
   end
@@ -28,5 +34,10 @@ class TmartsController < ApplicationController
   end
   def set_tmart
     @tmart = Tmart.find(params[:id])
+  end
+  def forbit_correct_user
+    if @tmart.user.id != current_user.id
+      redirect_to root_path
+    end
   end
 end
