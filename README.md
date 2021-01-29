@@ -59,7 +59,7 @@ Basic認証: admin/2222
 
 ### Association
 
-- has_many :tmarts, purchases
+- has_many :tmarts, orders
 
 ## tmarts テーブル
 
@@ -78,9 +78,9 @@ Basic認証: admin/2222
 ### Association
 
 - belongs to :user
-- has_one :purchase
+- has_one :order
 
-## purchases テーブル
+## orders テーブル
 
 | Column        | Type       | Options          |
 | ------------- | ---------- | ---------------- |
