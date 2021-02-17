@@ -6,20 +6,18 @@
   <div class="img-upload">
     <div class="weight-bold-text">
       画像
-      <span class="indispensable">必須</span>
     </div>
     <div class="click-upload">
       <p>
         クリックしてファイルをアップロード
       </p>
-      <%= f.file_field :image, id:"item-image" %>
+      <%= f.file_field :image, id:"tmart-image" %>
     </div>
   </div>
 
   <div class="new-tmart">
     <div class="weight-bold-text">
       商品名
-      <span class="indispensable">必須</span>
     </div>
     <%= f.text_area :product_name, class:"tmart-text", id:"tmart-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
   </div>
@@ -29,12 +27,10 @@
     <div class="form">
       <div class="weight-bold-text">
         カテゴリー
-        <span class="indispensable">必須</span>
       </div>
       <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"tmart-category"}) %>
       <div class="weight-bold-text">
         値下げ理由
-        <span class="indispensable">必須</span>
       </div>
       <%= f.collection_select(:disposal_id, Disposal.all, :id, :name, {}, {class:"select-box", id:"tmart-sales-status"}) %>
     </div>
@@ -49,7 +45,6 @@
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">消費期限</label>
-      <span class="indispensable">必須</span>
     </div>
     <div class='input-birth-wrap'>
       <%= raw sprintf(
@@ -64,8 +59,7 @@
                     date_separator: '%s'),
                   "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
     </div>
-    <div class='input-hour-min'>
-      <span class="indispensable">必須</span>
+    <div class='input-birth-wrap'>
       <div class='input-hour'>
       時
       </div>
@@ -83,18 +77,16 @@
     <div class="form">
       <div class="weight-bold-text">
         店舗名
-        <span class="indispensable">必須</span>
       </div>
       <%= f.collection_select(:store_id, Store.all, :id, :name, {}, {class:"select-box", id:"tmart-shipping-fee-status"}) %>
     </div>
   </div>
 
-  <div class="count-content">
-    <div class="price-text">
+  <div class="sell-price">
+    <div class="weight-bold-text question-text">
       <span>個数</span>
-      <span class="indispensable">必須</span>
     </div>
-    <%= f.text_field :count, class:"price-input", id:"tmart-price" %>
+    <%= f.text_field :count, class:"price-content", id:"tmart-price" %>
     <span class="sell-yen">個</span>
   </div>
 
@@ -106,7 +98,6 @@
       <div class="price-content">
         <div class="price-text">
           <span>販売価格</span>
-          <span class="indispensable">必須</span>
         </div>
         <span class="sell-yen">¥</span>
         <%= f.text_field :before_price, class:"price-input", id:"tmart-price" %>
@@ -114,7 +105,6 @@
       <div class="price-content">
         <div class="price-text">
           <span>割引価格</span>
-          <span class="indispensable">必須</span>
         </div>
         <span class="sell-yen">¥</span>
         <%= f.text_field :after_price, class:"price-input", id:"tmart-price" %>
